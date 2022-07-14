@@ -1,0 +1,51 @@
+<head>
+    <title>Mi primer p&aacute;gina</title>
+   <style>
+       .profe {
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+           font-size: 3em;
+           font-weight: bolder;
+       }
+       .div1 {
+           border-color: black;
+           border: 1px;
+       }
+   </style>
+   <script>
+    function suma(){
+    let suma, numero1, numero2;
+    numero1 = document.forms["pepe"]["cif1"].value;
+    numero2 = document.forms["pepe"]["cif2"].value;
+   
+    if( numero1 == "" ||  numero2 == "") respuesta = "Falta el numero"; 
+           
+        else {
+        suma= parseInt(numero1) + parseInt(numero2);
+        respuesta = suma;
+    }
+
+    document.getElementById("resultado").innerHTML=respuesta;
+}
+   </script>
+</head>
+<body>
+  
+<center>
+<p class="profe">pagina confiable</p>
+</center>
+<p class="profe">calculadora</p>
+
+<form name="pepe">
+    <input name="cif1">
+    <input type="button" value="+" onClick="suma()">
+    <input name="cif2">
+    </form>
+    <div id="resultado"></div>
+
+<p id="suma">
+</p>
+
+</body>
+
+
+</html>
